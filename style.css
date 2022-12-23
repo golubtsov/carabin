@@ -63,17 +63,9 @@
 .blockOrder {
     width: 220px;
     margin-right: 40px;
-    /* line-height: 70px; */
-    /* background-color: aqua; */
     display: flex;
     color: black;
     justify-content: space-around;
-}
-
-.blockOrder, .basket {
-    /* background-color: #FAFF00; */
-    /* border-radius: 5px; */
-    /* margin: 12px; */
 }
 
 .blockOrder button {
@@ -81,28 +73,13 @@
     background-color: #FAFF00;
     border-radius: 5px;
     font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* .blockOrder button {
-    margin: 0px 10px;
-    border: none;
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: #FAFF00;
+.blockOrder button:hover {
+    transform: scale(0.95);
 }
-
-.blockOrder .btnBasket {
-    line-height: 70px;
-}
-
-.basket{
-    display: inline-block;
-    /* position: relative; */
-    /* background-color: #FAFF00;
-    border-radius: 5px;
-    background-image: url(/картинки/корзина.png);
-} */ 
 
 /* ============================== SCREENSAVER =================================== */
 
@@ -241,6 +218,24 @@ footer {
 }
 
 .number_phone p, .adres a {padding: 5px;}
+
+.b_btn {
+    margin: auto;
+}
+
+.b_btn button {
+    border: none;
+    background-color: #FAFF00;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.b_btn button:hover {
+    transform: scale(0.95);
+}
+
 
 
 
