@@ -1,0 +1,25 @@
+@media screen and (max-width: 1220px) {
+.blockBtns, .blockOrder {
+    display: none;
+}
+
+
+
+
+
+.grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+@media screen and (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

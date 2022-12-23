@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Italianno&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Norican', sans-serif;
+}
+
+/* ===================================== MENU =============================== */
+
+/* .wrapper {
+    width: 1440px;
+    margin: auto;
+} */
+
+.menu {
+    width: 100%;
+    background-color: #292929;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    height: 70px;
+    line-height: 70px;
+}
+
+.blockLogo{
+    margin-left: 40px;
+    width: 10%;
+}
+
+.textLogo {
+    font-size: 36px;
+}
+
+.blockBtns {
+    width: 300px;
+}
+
+.blockBtns ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.blockBtns li {
+    min-width: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.link {
+    padding: 23px 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.link:hover {
+    color: #FAFF00;
+}
+
+.blockOrder {
+    width: 220px;
+    margin-right: 40px;
+    /* line-height: 70px; */
+    /* background-color: aqua; */
+    display: flex;
+    color: black;
+    justify-content: space-around;
+}
+
+.blockOrder, .basket {
+    /* background-color: #FAFF00; */
+    /* border-radius: 5px; */
+    /* margin: 12px; */
+}
+
+.blockOrder button {
+    border: none;
+    background-color: #FAFF00;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* .blockOrder button {
+    margin: 0px 10px;
+    border: none;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #FAFF00;
+}
+
+.blockOrder .btnBasket {
+    line-height: 70px;
+}
+
+.basket{
+    display: inline-block;
+    /* position: relative; */
+    /* background-color: #FAFF00;
+    border-radius: 5px;
+    background-image: url(/картинки/корзина.png);
+} */ 
+
+/* ============================== SCREENSAVER =================================== */
+
+.screensaver {
+    width: 100%; 
+    min-height: 800px;
+    background-image: url(/картинки/1647455115_88-vsegda-pomnim-com-p-ozero-gornoe-foto-106.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.mainTitle {
+    line-height: 800px;
+    text-align: center;
+    font-size: 96px;
+    color: #ffffff;
+    text-shadow: 3px 3px 3px #111111;
+    font-family: 'Bona Nova', serif;
+    /* font-family: 'Italianno', cursive; */
+}
+
+
+/* ================================= BLOCK_TITLE ========================================= */
+
+.block_title {
+    width: 100%;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+
+.title {
+    font-size: 32px;
+    padding: 15px;
+}
+
+/* ================================  BLOCK_CATALOG ============================================== */
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.item_category {
+    width: 280px;
+    min-height: 280px;
+    margin: 45px auto;
+    background-color: rgb(127, 127, 127);
+    border-radius: 50px;
+    text-align: center;
+}
+
+/* =============================== BLOCK_TITLE_2 ================================================= */
+
+.block_title_2 {
+    width: 100%;
+    background-color: #EEEEEE;
+    border-bottom: 1px solid #292929;
+}
+
+.title_2 {
+    margin-left: 40px;
+    font-size: 32px;
+    padding: 15px;
+}
+
+.card_product {
+    width: 280px;
+    min-height: 400px;
+    margin: 45px auto;
+    background-color: rgb(127, 127, 127);
+    text-align: center;
+}
+
+/* ================================ FOOTER ======================================================= */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    min-height: 100px;
+    background-color: #292929;
+    color: white;
+}
+
+.soc_network {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.soc_net {
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 64px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.soc_net:hover {
+    transform: scale(0.95);
+}
+
+.inst {
+    width: 64px;
+    height: 64px;
+    background-image: url(/картинки/instagram.png);
+    background-size: cover;
+}
+
+.vk {background-image: url(/картинки/vk.png);}
+
+.telega {background-image: url(/картинки/telegram.png);}
+
+.number_phone, .adres {
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.adres a {
+    text-decoration: none;
+    color: #EEEEEE;
+    margin: 20px;
+}
+
+.adres a:hover {
+    text-decoration: underline;
+}
+
+.number_phone p, .adres a {padding: 5px;}
+
+
+
+
