@@ -133,6 +133,7 @@
     background-image: url(/картинки/1647455115_88-vsegda-pomnim-com-p-ozero-gornoe-foto-106.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     box-sizing: border-box;
 }
 

@@ -47,6 +47,11 @@
         display: block;
         margin: auto;
     }
+
+    .block_iform {
+        display: block;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 900px) {
