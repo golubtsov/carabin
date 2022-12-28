@@ -1,3 +1,15 @@
+@media screen and (max-width: 2400px) {
+    .block_oders {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .block_oders {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .menu {
         grid-template-columns: 1fr 1fr;
