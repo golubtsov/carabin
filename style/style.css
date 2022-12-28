@@ -144,7 +144,6 @@
     color: #ffffff;
     text-shadow: 3px 3px 3px #111111;
     font-family: 'Bona Nova', serif;
-    /* font-family: 'Italianno', cursive; */
 }
 
 
@@ -167,7 +166,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
 }
 
 .item_category {
