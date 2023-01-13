@@ -8,121 +8,83 @@
 
 /* ===================================== MENU =============================== */
 
+.wrapper {
+    width: 100%;
+}
+
 .menu {
     width: 100%;
-    height: 70px;
+    display: flex;
     background-color: #000000;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    color: white;
-    line-height: 70px;
-    font-family: sans-serif;
+    font-family: 'Norican', sans-serif;
 }
 
-.blockLogo{
-    margin-left: 40px;
-    width: 10%;
-}
-
-.textLogo {
-    font-size: 36px;
-}
-
-.blockBtns ul {
+.menu ul {
+    width: 100%;
     list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.blockBtns li {
-    height: 70px;
-    text-align: center;
-    margin: auto 10px;
-}
-
-.link {
-    text-decoration: none;
-    font-size: 20px;
+.blockLogo {
+    width: 10%;
+    display: flex;
+    justify-content: center;
     color: white;
-    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 25px;
+    margin-left: 30px;
 }
 
-.link:hover {
-    text-decoration: underline;
+.blockLink {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: aquamarine;
+}
+
+.blockLink li {
+    margin: 15px;
+}
+
+.blockLink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 19px 30px;
+    margin: 0px 12px;
+    transition: all 0.2s ease-in;
+}
+
+.blockLink a:hover {
+    background-color: #d21616;
 }
 
 .blockOrder {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.blockOrder div {
-    margin: auto 10px;
+.blockOrder ul {
+    list-style-type: none;
 }
 
-.blockOrder button {
-    border: none;
-    background-color: #FAFF00;
-    border-radius: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    padding: 8px;
+.blockOrder li {
+    margin: 15px;
 }
 
-.blockOrder button:hover {
-    transform: scale(0.95);
-}
-
-.block_adaptive_btn {
-    display: none;
-    width: 100%;
-}
-
-.adaptive_btn {
-    display: block;
-    float: right;
-    width: 70px;
-    height: 70px;
-    background-color: rgb(255, 255, 255);
-    background-image: url(/картинки/бургер.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.adaptive_menu {
-    display: none;
-    width: 200px;
-    margin-top: 65px;
-    color: rgb(0, 0, 0);
-    border: 5px solid black;
-    float: right;
-    margin-right: -70px;
-}
-
-.adaptive_menu .adaptive_link {
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    cursor: pointer;
-}
-
-.adaptive_menu a {
+.blockOrder a {
+    width: 100px;
+    font-size: 18px;
     text-decoration: none;
-    color: white;
-}
-
-.adaptive_menu .adaptive_link a:hover {
-    text-decoration: underline;
-}
-
-.adaptive_link {
-    border-bottom: 5px solid black;
+    color: black;  
+    background-color: #FAFF00;
+    padding: 5px 15px;     
+    border-radius: 5px;
 }
 
 /* ============================== SCREENSAVER =================================== */
@@ -203,7 +165,7 @@
 
 footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     min-height: 100px;
     background-color: #000000;
@@ -261,23 +223,6 @@ footer {
 }
 
 .number_phone p, .adres a {padding: 5px;}
-
-.b_btn {
-    margin: auto;
-}
-
-.b_btn button {
-    border: none;
-    background-color: #FAFF00;
-    border-radius: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.b_btn button:hover {
-    transform: scale(0.95);
-}
 
 
 

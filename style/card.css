@@ -26,22 +26,22 @@
     padding: 5px;
 }
 
-.btn_buy button {
-    position: relative;
+.btn_buy {
+    margin: 15px auto;
+}
+
+.btn_buy a {
+    text-decoration: none;
     font-size: 15px;
     color: #fff;
-    border: none;
     background-color: #DF1D1D;
     border: 3px solid #DF1D1D;
     padding: 8px 22px;
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
     cursor: pointer;
     transition: all 0.3s;
-}
+} 
 
-.btn_buy button:hover {
+.btn_buy a:hover {
     background-color: #ffffff;
     color: #DF1D1D;
 }

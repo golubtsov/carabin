@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    background-color: #000000;
+    font-family: 'Norican', sans-serif;
+}
+
+.menu ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adapt-menu {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockLogo {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
+    margin-left: 30px;
+}
+
+.blockLink {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: aquamarine;
+}
+
+.blockLink li {
+    margin: 15px;
+}
+
+.blockLink a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 19px 30px;
+    margin: 0px 12px;
+    transition: all 0.2s ease-in;
+}
+
+.blockLink a:hover {
+    background-color: #d21616;
+}
+
+.blockOrder {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockOrder li {
+    margin: 15px;
+}
+
+.blockOrder a {
+    width: 100px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;  
+    background-color: #FAFF00;
+    padding: 5px 15px;     
+    border-radius: 5px;
+}
