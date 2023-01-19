@@ -216,6 +216,12 @@ footer {
     padding: 8px;
 }
 
+.adres {
+    display: flex;
+    align-item: center;
+    justifyl-content: center;
+}
+
 .adres a {
     text-decoration: none;
     color: #EEEEEE;

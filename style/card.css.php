@@ -35,6 +35,7 @@
 }
 
 .btn_buy a {
+    display: block;
     text-decoration: none;
     font-size: 15px;
     color: #fff;
@@ -83,9 +84,9 @@
     transform: translateY(150%);
     text-decoration: none;
     transition: 0.3s;
-    opacity: 0;
+    margin-top: 15px;
 }
 
-.item_category:hover a {
-    opacity: 1;
+.item_category a:hover {
+    background-color: rgba(129, 129, 129, 0.5);
 }

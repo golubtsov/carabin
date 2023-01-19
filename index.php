@@ -27,14 +27,14 @@
             </div>
             <div class="blockLink">
                 <ul>
-                    <li><a href="/index" class="link">Главная</a></li>
-                    <li><a href="/catalog" class="link">Каталог</a></li>
-                    <li><a href="/about" class="link">О нас</a></li>
+                    <li><a href="index.php" class="link">Главная</a></li>
+                    <li><a href="catalog.php" class="link">Каталог</a></li>
+                    <li><a href="about.php" class="link">О нас</a></li>
                 </ul>
             </div>
             <div class="blockOrder">
                 <ul>
-                    <li><a href="/basket" class="basket">Корзина</a></li>
+                    <li><a href="basket.php" class="basket">Корзина</a></li>
                     <li><a href="" class="basket">Войти</a></li>
                 </ul>
             </div>

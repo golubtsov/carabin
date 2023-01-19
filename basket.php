@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="/style/card.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/adaptive.css">
-    <link rel="stylesheet" href="/style/basket_page.css">
+    <link rel="stylesheet" href="/style/card.css.php">
+    <link rel="stylesheet" href="/style/style.css.php">
+    <link href="/style/adaptive.css.php" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/style/basket_page.css.php">
 
 </head>
 <body>
-
+    <?php require './include/db.php' ?>
     <div class="wrapper">
         <div class="menu">
             <div class="blockLogo">
@@ -21,14 +21,14 @@
             </div>
             <div class="blockLink">
                 <ul>
-                    <li><a href="index.html" class="link">Главная</a></li>
-                    <li><a href="catalog.html" class="link">Каталог</a></li>
-                    <li><a href="about.html" class="link">О нас</a></li>
+                    <li><a href="index.php" class="link">Главная</a></li>
+                    <li><a href="catalog.php" class="link">Каталог</a></li>
+                    <li><a href="about.php" class="link">О нас</a></li>
                 </ul>
             </div>
             <div class="blockOrder">
                 <ul>
-                    <li><a href="" class="basket">Корзина</a></li>
+                    <li><a href="basket.php" class="basket">Корзина</a></li>
                     <li><a href="" class="basket">Войти</a></li>
                 </ul>
             </div>
@@ -40,48 +40,25 @@
             </div>
             <div class="block_bascet">
                 <p>Корзина</p>
-                <div class="btn_clear"></div>
+                <div class="btn_clear" style="background: url('./images/close.png');"></div>
             </div>
             <div class="block_oders">
-                <div class="card_block">
-                    <div class="block_image"><img src="/картинки/бинокль.jpg" alt="" srcset=""></div>
-                    <div class="product_name">product_name</div>
-                    <div class="product_maker">product_maker</div>
-                    <div class="product_price"><b>product_price</b></div>
-                    <div class="btn_buy"><button>Купить</button></div>
-                </div>
-                <div class="card_block">
-                    <div class="block_image"><img src="/картинки/бинокль.jpg" alt="" srcset=""></div>
-                    <div class="product_name">product_name</div>
-                    <div class="product_maker">product_maker</div>
-                    <div class="product_price"><b>product_price</b></div>
-                    <div class="btn_buy"><button>Купить</button></div>
-                </div>
-                <div class="card_block">
-                    <div class="block_image"><img src="/картинки/бинокль.jpg" alt="" srcset=""></div>
-                    <div class="product_name">product_name</div>
-                    <div class="product_maker">product_maker</div>
-                    <div class="product_price"><b>product_price</b></div>
-                    <div class="btn_buy"><button>Купить</button></div>
-                </div>
-                <div class="card_block">
-                    <div class="block_image"><img src="/картинки/бинокль.jpg" alt="" srcset=""></div>
-                    <div class="product_name">product_name</div>
-                    <div class="product_maker">product_maker</div>
-                    <div class="product_price"><b>product_price</b></div>
-                    <div class="btn_buy"><button>Купить</button></div>
-                </div>
+                <?php require './include/get_pop_products.php' ?>
             </div>
             <div class="block_price">
                 <h3 class="price">Цена:</h3>
             </div>
             <div class="block_form">
-                <form action="#">
-                    <h2>Введите свои данные</h2>
-                    <p><label for="lname">Фамилия</label><input type="text" id="lname"></p>
-                    <p><label for="lname">Имя</label><input type="text" id="Fname"></p>
-                    <p><label for="lname">Отчество</label><input type="text" id="lname"></p>
-                    <p><label for="phone">Номер телефона</label><input type="text" id="phone"></p>
+                <form action="server.php" method="POST">
+                    <h2>Оформление заказа</h2>
+                    <p><label for="lname">Фамилия<b>*</b></label></p>
+                    <p><input type="text" id="lname" required></p>
+                    <p><label for="fname">Имя<b>*</b></label></p>
+                    <p><input type="text" id="fname" required></p>
+                    <p><label for="mname">Отчество<b>*</b></label></p>
+                    <p><input type="text" id="mname" required></p>
+                    <p><label for="phone">Номер телефона<b>*</b></label></p>
+                    <p><input type="text" id="phone" required></p>
                     <button type="submit">Оформить заказ</button>
                 </form>
             </div>
@@ -104,7 +81,7 @@
         </footer>
     </div>
     
-    <script src="/script.js"></script>
+    <script src="./script.js.php"></script>
 
 </body>
 </html>

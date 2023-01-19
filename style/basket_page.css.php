@@ -23,6 +23,7 @@
     text-align: center;
     padding: 15px;
     font-size: 32px;
+    background-color:rgb(219, 219, 219);
 }
 
 .block_bascet {
@@ -38,7 +39,7 @@
     height: 32px;
     position: absolute;
     right: 40px;
-    background-image: url(/картинки/крестик.png);
+    background-image: url('./images/close.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -63,7 +64,7 @@
 }
 
 .block_price {
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .block_price h3 {padding: 15px 40px;}
@@ -71,12 +72,22 @@
 .block_form {
     position: relative;
     display: block;
-    width: 100%;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(29,29,29,0.5);
 }
 
 .block_form h2 {
-    font-size: 24px;
+    font-size: 28px;
     padding: 15px 40px;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    margin: auto;
 }
 
 .block_form p {
@@ -85,9 +96,10 @@
 }
 
 .block_form input {
-    width: 10%;
-    margin-left: 15px;
-    border: none;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .block_form button {
@@ -111,3 +123,5 @@
     background-color: #ffffff;
     color: #DF1D1D;
 }
+
+b {color: red;}

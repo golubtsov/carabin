@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О компании Карабин</title>
-    <link rel="stylesheet" href="/style/style.css">
-    <link href="/style/adaptive.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/style/about.css">
+    <link rel="stylesheet" href="/style/style.css.php">
+    <link href="/style/adaptive.css.php" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/style/about.css.php">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,14 +25,14 @@
             </div>
             <div class="blockLink">
                 <ul>
-                    <li><a href="index.html" class="link">Главная</a></li>
-                    <li><a href="catalog.html" class="link">Каталог</a></li>
-                    <li><a href="about.html" class="link">О нас</a></li>
+                    <li><a href="index.php" class="link">Главная</a></li>
+                    <li><a href="catalog.php" class="link">Каталог</a></li>
+                    <li><a href="about.php" class="link">О нас</a></li>
                 </ul>
             </div>
             <div class="blockOrder">
                 <ul>
-                    <li><a href="" class="basket">Корзина</a></li>
+                    <li><a href="basket.php" class="basket">Корзина</a></li>
                     <li><a href="" class="basket">Войти</a></li>
                 </ul>
             </div>

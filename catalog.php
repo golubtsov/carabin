@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Категории</title>
 
-    <link rel="stylesheet" href="/style/card.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/category.css">
-    <link href="/style/adaptive.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/style/card.css.php">
+    <link rel="stylesheet" href="/style/style.css.php">
+    <link rel="stylesheet" href="/style/category.css.php">
+    <link href="/style/adaptive.css.php" rel="stylesheet" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Italianno&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <?php require './include/db.php' ?>
     <div class="wrapper">
         <div class="menu">
             <div class="blockLogo">
@@ -28,14 +28,14 @@
             </div>
             <div class="blockLink">
                 <ul>
-                    <li><a href="index.html" class="link">Главная</a></li>
-                    <li><a href="catalog.html" class="link">Каталог</a></li>
-                    <li><a href="about.html" class="link">О нас</a></li>
+                    <li><a href="index.php" class="link">Главная</a></li>
+                    <li><a href="catalog.php" class="link">Каталог</a></li>
+                    <li><a href="about.php" class="link">О нас</a></li>
                 </ul>
             </div>
             <div class="blockOrder">
                 <ul>
-                    <li><a href="" class="basket">Корзина</a></li>
+                    <li><a href="basket.php" class="basket">Корзина</a></li>
                     <li><a href="" class="basket">Войти</a></li>
                 </ul>
             </div>
@@ -43,61 +43,20 @@
 
         <div class="block_catalog">
             <div class="block_item">
-                <div class="item"><a href="">ТОВАР</a></div>
-                <div class="item"><a href="">ТОВАР</a></div>
-                <div class="item"><a href="">ТОВАР</a></div>
-                <div class="item"><a href="">ТОВАР</a></div>
-                <div class="item"><a href="">ТОВАР</a></div>
-                <div class="item"><a href="">ТОВАР</a></div>
-                <div class="item"><a href="">ТОВАР</a></div>
-                <div class="item"><a href="">ТОВАР</a></div>
+                <?php require './include/get_categories.php' ?>
             </div>
             <div class="adaptive_category">
                 <div class="text">
                     <h2>Категории</h2>
                 </div>
                 <div class="category_links">
-                    <div class="item"><a href="">ТОВАР</a></div>
-                    <div class="item"><a href="">ТОВАР</a></div>
-                    <div class="item"><a href="">ТОВАР</a></div>
-                    <div class="item"><a href="">ТОВАР</a></div>
-                    <div class="item"><a href="">ТОВАР</a></div>
-                    <div class="item"><a href="">ТОВАР</a></div>
-                    <div class="item"><a href="">ТОВАР</a></div>
-                    <div class="item"><a href="">ТОВАР</a></div>
+                <?php require './include/get_categories.php' ?>
                 </div>
             </div>
         </div>
 
         <div class="block_products">
-            <div class="card_block">
-                <div class="block_image"><img src="/картинки/наборы.jpg" alt="" srcset=""></div>
-                <div class="product_name">product_name</div>
-                <div class="product_maker">product_maker</div>
-                <div class="product_price"><b>product_price</b></div>
-                <div class="btn_buy"><button>Купить</button></div>
-            </div>
-            <div class="card_block">
-                <div class="block_image"><img src="/картинки/наборы.jpg" alt="" srcset=""></div>
-                <div class="product_name">product_name</div>
-                <div class="product_maker">product_maker</div>
-                <div class="product_price"><b>product_price</b></div>
-                <div class="btn_buy"><button>Купить</button></div>
-            </div>
-            <div class="card_block">
-                <div class="block_image"><img src="/картинки/наборы.jpg" alt="" srcset=""></div>
-                <div class="product_name">product_name</div>
-                <div class="product_maker">product_maker</div>
-                <div class="product_price"><b>product_price</b></div>
-                <div class="btn_buy"><button>Купить</button></div>
-            </div>
-            <div class="card_block">
-                <div class="block_image"><img src="/картинки/наборы.jpg" alt="" srcset=""></div>
-                <div class="product_name">product_name</div>
-                <div class="product_maker">product_maker</div>
-                <div class="product_price"><b>product_price</b></div>
-                <div class="btn_buy"><button>Купить</button></div>
-            </div>
+            <?php require './include/get_new_products.php' ?>
         </div>
 
         <footer>
