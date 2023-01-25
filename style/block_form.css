@@ -1,0 +1,70 @@
+.block_form {
+    display: flex;
+    width: 100%;
+    min-height: 77vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_form h2 {
+    font-size: 28px;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+form {
+    display: block;
+    width: 40%;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(29,29,29,0.5);
+}
+
+.block_form p {
+    font-size: 20px;
+    padding: 8px 40px;
+}
+
+.block_form input {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.block_form button {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    background-color: #DF1D1D;
+    border: 3px solid #DF1D1D;
+    padding: 12px 20px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.block_form button:hover {
+    background-color: #ffffff;
+    color: #DF1D1D;
+}
+
+b {color: red;}
+
+.signup {
+    text-align: center;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+
+.signup a {
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
