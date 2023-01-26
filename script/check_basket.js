@@ -29,7 +29,7 @@ function create_card_oder(el){
     }
 }
 
-// ф-ия удаляет указан
+// ф-ия удаляет указанный товар
 function remove_oder(el){
     let basket = JSON.parse(localStorage.basket);
     delete basket[el]; 
@@ -37,6 +37,7 @@ function remove_oder(el){
     check_basket();
 }
 
+// ф-ия считает сумму всез заказов
 function get_sum(el){
     let sum = 0;
     for (const key in el) {
