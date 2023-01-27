@@ -50,7 +50,8 @@ async function send_oder(oder){
     await fetch(`http://localhost:3000/page/?oder=${oder}`)
         .then(data => data.text())
         .then(data => {
-            console.log(data);
+            document.querySelector('.popap').style.display = 'flex';
+            document.querySelector('.text').innerHTML = data;
         })
 }
 

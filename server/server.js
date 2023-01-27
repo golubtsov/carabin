@@ -106,7 +106,7 @@ app.get('/page/', json_parser, (req, res) => {
 
         pool.query(`INSERT INTO oders(num_oder, fname, lname, phone, price, name_prod_count) VALUES (${num_oder},'${oder.fname}','${oder.lname}','${oder.phone}',${oder.price},'${name_prod_count}')`, (error,result) => {
             if (error) throw error;
-            res.send('Заказ обработан!');
+            res.send(`Номер вашего заказ - ${num_oder}. <br> Когда он будет готов, наши менеджеры свяжутся с вами!`);
         });
     } else {
         res.send('Неправильный запрос!');
