@@ -55,7 +55,6 @@ function get_link(){
 function get_by_cat(event){
     document.querySelector('.block_products').innerHTML = '';
     event.preventDefault();
-    console.log(this.dataset.id);
     sort_by_cat(this.dataset.id);
 }
 

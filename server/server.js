@@ -3,8 +3,27 @@ const app = express();
 const cors = require('cors');
 const parser = require('body-parser');
 let json_parser = parser.json();
-
 const pool = require('./db.js');
+
+// ф-ия создает номер заказа
+function create_num_oder(){
+    return Math.floor(Math.random()*99999999);
+}
+
+// ф-ия превращает св-во products заказа в строку, которая будет записываться в бд
+function create_str_prod(prods){
+    let str = '';
+    for (const key in prods) {
+        str += key;
+        for (const k in prods[key]) {
+            if(prods[key].count){
+                str += ' - ' + prods[key].count + '; ';
+                break;
+            }
+        }
+    }
+    return str;
+}
 
 app.use(cors({
     origin: '*'
@@ -80,6 +99,15 @@ app.get('/page/', json_parser, (req, res) => {
             default:
                 break;
         }
+    } else if(req.query.oder){
+        let oder = JSON.parse(req.query.oder);
+        let num_oder = create_num_oder(); // номер заказа
+        let name_prod_count = create_str_prod(oder.products); // строка с товарами и их количеством
+
+        pool.query(`INSERT INTO oders(num_oder, fname, lname, phone, price, name_prod_count) VALUES (${num_oder},'${oder.fname}','${oder.lname}','${oder.phone}',${oder.price},'${name_prod_count}')`, (error,result) => {
+            if (error) throw error;
+            res.send('Заказ обработан!');
+        });
     } else {
         res.send('Неправильный запрос!');
     }
@@ -93,75 +121,3 @@ app.listen('3000', (err, res) => {
         console.log('Server work');
     }
 });
-
-
-// switch (req.query.products) {
-//     case 'cats':
-//         pool.query('SELECT * FROM categories;', (error, result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'all':
-//         pool.query('SELECT * FROM products;', (error, result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Одежда':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Одежда";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Посуда':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Посуда";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Снаряжение':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Снаряжение";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Веревки':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Веревки";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Наборы':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Наборы";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Обувь':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Обувь";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Спальники':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Спальники";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case 'Палатки':
-//         pool.query('SELECT * FROM products  WHERE name_cat = "Палатки";', (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     case '2':
-//         pool.query(`SELECT * FROM products  WHERE id = '2';`, (error,result) => {
-//             if (error) throw error;
-//             res.send(result);
-//         });
-//         break;
-//     default:
-//         break;
-// }
