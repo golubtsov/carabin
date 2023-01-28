@@ -1,6 +1,6 @@
 .block_inform {
     width: 100%;
-    min-height: 76.6vh;
+    min-height: 700px;
     display: grid;
     grid-template-columns: 1.2fr 1.8fr;
 }

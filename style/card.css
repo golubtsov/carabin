@@ -56,16 +56,11 @@
 
 
 .item_category {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 280px;
     min-height: 280px;
     margin: 45px auto;
     border-radius: 50px;
     text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     box-shadow: 10px 10px 25px rgb(127, 127, 127, 0.5);
     cursor: pointer;
 }
