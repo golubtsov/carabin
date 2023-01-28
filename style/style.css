@@ -180,6 +180,7 @@ footer {
 }
 
 .soc_net {
+    display: block;
     width: 64px;
     height: 64px;
     margin: 8px;
@@ -202,9 +203,9 @@ footer {
     background-size: cover;
 }
 
-.vk {background-image: url('../images/telegram.png');}
+.vk {background-image: url('../images/vk.png');}
 
-.telega {background-image: url('../images/vk.png');}
+.telega {background-image: url('../images/telegram.png');}
 
 .number_phone, .adres {
     text-align: center;
