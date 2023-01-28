@@ -23,11 +23,16 @@
 .item a {
     color: white;
     text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.item a:hover {
+    text-decoration: underline;
 }
 
 .block_products {
     width: 100%;
-    min-height: 67.5vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }

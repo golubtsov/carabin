@@ -6,7 +6,7 @@
     font-family: 'Norican', sans-serif;
 }
 
-/* ===================================== MENU =============================== */
+/* ========== MENU ========== */
 
 .wrapper {
     width: 100%;
@@ -87,7 +87,7 @@
     border-radius: 5px;
 }
 
-/* ============================== SCREENSAVER =================================== */
+/* ========== SCREENSAVER ========== */
 
 .screensaver {
     width: 100%; 
@@ -109,7 +109,7 @@
 }
 
 
-/* ================================= BLOCK_TITLE ========================================= */
+/* ========== BLOCK_TITLE ========== */
 
 .block_title {
     width: 100%;
@@ -122,7 +122,7 @@
     padding: 15px;
 }
 
-/* ================================  BLOCK_CATALOG ============================================== */
+/* ==========  BLOCK_CATALOG ========== */
 
 .grid {
     width: 100%;
@@ -139,7 +139,7 @@
     text-align: center;
 }
 
-/* =============================== BLOCK_TITLE_2 ================================================= */
+/* ========== BLOCK_TITLE_2 ========== */
 
 .block_title_2 {
     width: 100%;
@@ -161,7 +161,7 @@
     text-align: center;
 }
 
-/* ================================ FOOTER ======================================================= */
+/* ========== FOOTER ========== */
 
 footer {
     display: grid;
@@ -231,10 +231,7 @@ footer {
 
 .number_phone p, .adres a {padding: 5px;}
 
-
-
-
-
+/* ========== POPAP ========== */
 
 .popap{
     position: absolute;
@@ -297,4 +294,20 @@ footer {
     width: 100%;
     text-align: center;
     padding: 15px;
+}
+
+/* ========== BLOCK ERROR ========== */
+
+.blc-error{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-err{
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
 }

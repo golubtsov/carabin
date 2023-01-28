@@ -108,8 +108,6 @@ app.get('/page/', json_parser, (req, res) => {
             if (error) throw error;
             res.send(`Номер вашего заказ - ${num_oder}. <br> Когда он будет готов, наши менеджеры свяжутся с вами!`);
         });
-    } else {
-        res.send('Неправильный запрос!');
     }
 
 });

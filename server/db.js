@@ -3,7 +3,7 @@ const config = {
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'website-carabin'
+    database: 'website_carabin'
 };
 
 const pool = mysql.createPool(config);
