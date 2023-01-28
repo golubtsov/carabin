@@ -17,6 +17,7 @@ function add_basket(elem){
             'price': product.price,
             'count': product.count
         };
-        alert('Товар добавлен в корзину!');
+        document.querySelector('.popap').style.display = 'flex';
+        document.querySelector('.text').innerHTML = 'Товар добавлен в корзину!';
     localStorage.basket = JSON.stringify(basket);
 }

@@ -25,11 +25,13 @@ document.querySelector('form button').addEventListener('click', (event) => {
 // ф-ия проверяет заполненность всех полей формы
 function check_form(elem){
     if(elem.elements.fname.value == '' || elem.elements.lname.value == '' || elem.elements.phone.value == ''){
-        alert('Заполните все поля формы!');
+        document.querySelector('.popap').style.display = 'flex';
+        document.querySelector('.text').innerHTML = 'Заполните все поля формы!';
     } else if(elem.elements.phone.value.length == 11){
         return true;
     } else {
-        alert('8888');
+        document.querySelector('.popap').style.display = 'flex';
+        document.querySelector('.text').innerHTML = 'Поле номера телефона заполнено неправильно! Номер телефона должен начинаться с цифры 8, количество символов должно быть равно 11.';
     }
 }
 
@@ -41,7 +43,8 @@ function check_local(){
             return basket;
         }
     }
-    alert('Добавьте товар в козину, чтобы оформить заказ!');
+    document.querySelector('.popap').style.display = 'flex';
+    document.querySelector('.text').innerHTML = 'Добавьте товар в козину, чтобы оформить заказ!';
     return false;
 }
 
