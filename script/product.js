@@ -25,13 +25,13 @@ function create_about_prod(prod){
             <h2>${prod.name_product}</h2>
         </div>
         <div>
-            <h2>${prod.producer}</h2>
+            <p>${prod.produser}</p>
         </div>
         <div>
-            <h2>${prod.about}</h2>
+            <p>${prod.about}</p>
         </div>
         <div>
-            <h2>${prod.price}</h2>
+            <p>${prod.price} руб</p>
         </div>
         <div class="btn_buy">
             <button class="add_bas">Добавить в корзину</button>

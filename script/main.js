@@ -49,11 +49,6 @@ function create_card_prod(criterion, block){
     }
 }
 
-// ф-ия отправляет название продукта в localStorage, чтобы потом, когда пользователь перейдет на product.html, взять эти данные, сделать запрос в бд, получить ответ и вывести его в виде искомого товара
-function send_name_prod(name){
-    localStorage.setItem('name_product', name);
-}
-
 get_categories();
 get_pop_product();
 get_new_product();

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Italianno&family=Roboto:ital,wght@1,100&display=swap');
 
+/* ========== CARD PRODUCT ========== */
 .card_block {
     margin: 50px auto;
     width: 280px;
-    max-height: 460px;
+    max-height: 440px;
     background-color: #fff;
     text-align: center;
     font-size: 15px;
@@ -45,15 +46,9 @@
 .btn_buy a:hover {
     background-color: #ffffff;
     color: #DF1D1D;
-}
+} 
 
-
-
-
-
-
-
-
+/* ========== BLOCK CATEGORIES ========== */
 
 .item_category {
     width: 280px;

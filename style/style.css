@@ -12,7 +12,7 @@
     width: 100%;
 }
 
-.menu {
+/* .menu {
     width: 100%;
     display: flex;
     background-color: #000000;
@@ -31,10 +31,14 @@
     width: 10%;
     display: flex;
     justify-content: center;
-    color: white;
     font-size: 16px;
     padding: 10px 25px;
     margin-left: 30px;
+}
+
+.blockLogo a {
+    color: white;
+    text-decoration: none;
 }
 
 .blockLink {
@@ -85,6 +89,81 @@
     background-color: #FAFF00;
     padding: 5px 15px;     
     border-radius: 5px;
+} */
+
+.menu {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 64px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    background-color: #000000;
+    color: white;
+    font-size: 20px;
+}
+
+.textLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    line-height: 64px;
+}
+
+.textLogo a {
+    color: white;
+    text-decoration: none;
+}
+
+.blc-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.btn-scroll {
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.blc-items {
+    display: none;
+    height: 0;
+    opacity: 0;
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+} 
+
+.items {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    list-style-type: none;
+    font-size: 20px;
+    margin-left: -40px;
+}
+
+.item-link {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.item-link:hover {
+    background-color: red;
+}
+
+.item-link a {
+    text-decoration: none;
+    color: white;
 }
 
 /* ========== SCREENSAVER ========== */
