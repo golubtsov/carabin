@@ -66,10 +66,7 @@ async function sort_by_cat(val){
     });
 }
 
-
-
 get_categories();
 get_products();
-
 
 

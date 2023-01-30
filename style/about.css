@@ -1,15 +1,15 @@
-.block_iform {
+.block_inform {
     width: 100%;
     min-height: 85vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.block_iform div {
+.block_inform div {
     padding: 15px 60px;
 }
 
-.block_iform p {
+.block_inform p {
     font-size: 18px;
 }
 
@@ -22,7 +22,7 @@
     margin: 15px;
 }
 
-.block_iform_1 {
+.block_inform_1 {
     border-right: 1px solid rgb(0, 0, 0);
 }
 

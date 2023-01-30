@@ -12,16 +12,30 @@
 
 @media screen and (max-width: 1300px) {
 
+    .blc-btn-adaptive {
+        display: flex;
+    }
+
+    .block_item {
+        height: 0;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    .item {
+        width: 100%;
+        padding: 6px 0;
+    }
+
     .grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     .block_products {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .adaptive_category {
-        display: block;
     }
 }
 
@@ -57,6 +71,11 @@
 
     .block_products {
         grid-template-columns: 1fr 1fr ;
+    }
+
+    .block_inform {
+        display: flex;
+        flex-direction: column;
     }
 }
 
