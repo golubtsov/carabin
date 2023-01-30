@@ -11,17 +11,6 @@
 }
 
 @media screen and (max-width: 1300px) {
-    .menu {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .blockBtns, .blockOrder {
-        display: none;
-    }
-
-    .block_adaptive_btn{
-        display: block;
-    }
 
     .grid {
         grid-template-columns: 1fr 1fr 1fr;
@@ -31,33 +20,23 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .block_item {
-        /* display: none; */
-    }
-
     .adaptive_category {
         display: block;
     }
 }
 
 @media screen and (max-width: 1100px) {
+
+    .textLogo {
+        margin-left: 30px;
+    }
+    
     footer {
         display: block;
     }
 
     .soc_network {
         width: 30%;
-    }
-
-    .btnOrder {
-        width: 30%;
-        padding: 20px;
-        margin: auto;
-    }
-
-    .btnOrder button {
-        display: block;
-        margin: auto;
     }
 
     .block_iform {
@@ -67,6 +46,11 @@
 }
 
 @media screen and (max-width: 900px) {
+
+    .textLogo {
+        margin-left: 60px;
+    }
+
     .grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -103,6 +87,11 @@
 }
 
 @media screen and (max-width: 450px) {
+
+    .textLogo {
+        margin-left: 80px;
+    }
+
     .mainTitle {
         line-height: 400px;
         font-size: 32px;

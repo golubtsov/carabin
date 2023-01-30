@@ -16,7 +16,6 @@ function close_manu(){
     blc_items.style.opacity = 0;
     blc_items.style.height = 0;
     setTimeout(() => blc_items.style.display = 'none', 500);
-    // blc_items.style.display = 'none';
 }
 
 function get_menu(){
