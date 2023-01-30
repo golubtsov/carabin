@@ -17,6 +17,11 @@ function create_card_oder(el){
                 <div class="about_oder">
                     <div>
                         <div class="name"><p>${key}</p></div>
+                        <div class="blc-count">
+                            <button class="minus" data-key="${key}">-</button>
+                            <p class="count">${el[key]['count']}</p>
+                            <button class="plus" data-key="${key}">+</button>
+                        </div>
                         <div class="price"><p>${el[key]['price']}  руб</p></div>
                     </div>
                     <div class="btn">
@@ -27,6 +32,63 @@ function create_card_oder(el){
         `;
         get_sum(el[key]['price']);
     }
+    get_listener(); // 
+}
+
+// ф-ия получает данные в localStorage
+function get_local(){
+    let basket = JSON.parse(localStorage.basket);
+    return basket;
+}
+
+// ф-ия отправляет данные в localStorage
+function send_local(el){
+    localStorage.basket = JSON.stringify(el);
+}
+
+// ф-ия вешает события на все кнопки
+function get_listener(){
+    const btns_minus = document.querySelectorAll('.minus');
+    for (const el of btns_minus) {
+        el.addEventListener('click', minus);
+    }
+    const btns_plus = document.querySelectorAll('.plus');
+    for (const el of btns_plus) {
+        el.addEventListener('click', plus);
+    }
+}
+
+// ф-ия уменьшает кол-во выбранного товара на 1
+function minus(){
+    let bas = get_local();
+    for (const k in bas) {
+        if(k == this.dataset.key){
+            if(bas[k]['count'] != 1){
+                bas[k]['count']--;
+                break;
+            }
+        }
+    }
+    send_local(bas);
+    check_basket();
+}
+
+// ф-ия увеличивает кол-во выбранного товара на 1
+function plus(){
+    let bas = get_local();
+    for (const k in bas) {
+        if(k == this.dataset.key){
+            if(bas[k]['count'] != 10){
+                bas[k]['count']++;
+                break;
+            } else {
+                document.querySelector('.popap').style.display = 'flex';
+                document.querySelector('.text').innerHTML = `Максимальное количество одного вида товаров в одном заказе!`;
+            }
+        }
+    }
+    send_local(bas);
+    check_basket();
 }
 
 // ф-ия удаляет указанный товар
@@ -41,7 +103,7 @@ function remove_oder(el){
 function get_sum(el){
     let sum = 0;
     for (const key in el) {
-        sum += el[key]['price'];
+        sum += el[key]['price']*el[key]['count'];
     }
     document.querySelector('m').innerHTML = sum;
 }

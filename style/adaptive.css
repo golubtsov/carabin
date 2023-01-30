@@ -76,6 +76,11 @@
     .block_inform {
         display: flex;
         flex-direction: column;
+        border-color: aqua;
+    }
+
+    .block_inform div {
+        padding: 15px 30px;
     }
 }
 

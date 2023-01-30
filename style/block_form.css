@@ -1,7 +1,6 @@
 .block_form {
     display: flex;
     width: 100%;
-    min-height: 77vh;
     justify-content: center;
     align-items: center;
 }
