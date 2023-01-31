@@ -22,7 +22,7 @@ function create_card_oder(el){
                             <p class="count">${el[key]['count']}</p>
                             <button class="plus" data-key="${key}">+</button>
                         </div>
-                        <div class="price"><p>${el[key]['price']}  руб</p></div>
+                        <div class="price"><p>${el[key]['price']*el[key]['count']}  руб</p></div>
                     </div>
                     <div class="btn">
                         <button onclick="remove_oder('${key}')" class="btn_remove">Удалить</button>

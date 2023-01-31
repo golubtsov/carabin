@@ -6,14 +6,11 @@
 }
 
 .block_imgs {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 8px;
 }
 
 .block_img {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,10 +44,9 @@
     padding: 15px 0px;
 }
 
-.prod_inform div {
+.prod_inform>div {
     width: 100%;
     margin: 12px auto;
-    text-align: left;
 }
 
 .add_bas {
