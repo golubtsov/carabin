@@ -4,7 +4,7 @@
 .card_block {
     margin: 50px auto;
     width: 280px;
-    max-height: 440px;
+    min-height: 460px;
     background-color: #fff;
     text-align: center;
     font-size: 15px;
@@ -25,6 +25,13 @@
 
 .card_block div {
     padding: 5px;
+}
+
+.product_name {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn_buy {

@@ -87,7 +87,7 @@ app.get('/page/', json_parser, (req, res) => {
     } else if(req.query.id){
         switch (req.query.id) {
             case req.query.id:
-                pool.query(`SELECT * FROM products WHERE id = ${Number(req.query.id)}`, (error,result) => {
+                pool.query(`SELECT * FROM products WHERE id = '${req.query.id}'`, (error,result) => {
                     if(result.length > 0){
                         res.send(result);
                     } else {
