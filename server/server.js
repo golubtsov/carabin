@@ -52,7 +52,8 @@ app.get('/', json_parser, (req, res) => {
     
         default:
             break;
-    }
+        }
+
 });
 
 app.get('/page/', json_parser, (req, res) => {
@@ -71,6 +72,7 @@ app.get('/page/', json_parser, (req, res) => {
                 break;
         
             default:
+                res.send({res: 'Данного товара нет!'});
                 break;
         }
     } else if(req.query.products){
@@ -82,6 +84,7 @@ app.get('/page/', json_parser, (req, res) => {
                 break;
         
             default:
+                res.send({res: 'Данного товара нет!'});
                 break;
         }
     } else if(req.query.id){
@@ -91,12 +94,13 @@ app.get('/page/', json_parser, (req, res) => {
                     if(result.length > 0){
                         res.send(result);
                     } else {
-                        res.send('Данного товара нет!');
+                        res.send({res: 'Данного товара нет!'});
                     }
                 });
                 break;
         
             default:
+                res.send({res: 'Данного товара нет!'});
                 break;
         }
     } else if(req.query.oder){
@@ -110,6 +114,12 @@ app.get('/page/', json_parser, (req, res) => {
         });
     }
 
+});
+
+app.get('/admin/', json_parser, (req, res) => {
+    pool.query('SELECT * FROM oders', (error,result) => {
+        res.send(result);
+    });
 });
 
 app.listen('3000', (err, res) => {
