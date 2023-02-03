@@ -122,6 +122,12 @@ app.get('/admin/', json_parser, (req, res) => {
     });
 });
 
+app.delete('/admin/', json_parser, (req, res) => {
+    pool.query(`DELETE FROM oders WHERE num_oder = ${Number(req.query.id)}`, (error,result) => {
+        res.send(result);
+    });
+});
+
 app.listen('3000', (err, res) => {
     if(err){
         console.log(err);

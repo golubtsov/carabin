@@ -23,4 +23,12 @@ function create_el_tab(oders) {
     }
 }
 
+async function ready_oder(el) {
+    await fetch(`http://localhost:3000/admin/?id=${el}`, {
+        method: 'DELETE',
+    })
+        .then()
+        .then(() => get_oders())
+}
+
 get_oders();
