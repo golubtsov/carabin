@@ -8,7 +8,7 @@ async function get_oders() {
 function create_el_tab(oders) {
     for (const el of oders) {
         document.querySelector('table').innerHTML += `
-        <tr>
+        <tr class="item">
             <td>${el.num_oder}</td>
             <td>${el.fname}</td>
             <td>${el.lname}</td>
@@ -27,8 +27,9 @@ async function ready_oder(el) {
     await fetch(`http://localhost:3000/admin/?id=${el}`, {
         method: 'DELETE',
     })
-        .then()
-        .then(() => get_oders())
+        .then(() => {
+            window.location.reload();
+        })
 }
 
 get_oders();
